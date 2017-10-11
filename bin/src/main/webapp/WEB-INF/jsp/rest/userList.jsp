@@ -1,10 +1,6 @@
+<%@page import="springmvc.bean.User"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt_rt"%>
-    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -12,8 +8,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-	
-	<p>annotationController.jsp run</p>
-	<h1>hello,  ${name }. !!!!!!!!!! </h1><c:out value="${name}"></c:out>
+	<h1>用户列表</h1>
+		<h1>
+			姓名：${user.name}
+		</h1>
+		<h1>
+			年龄：${user.age}
+		</h1>
 </body>
-</html> 
+</html>
