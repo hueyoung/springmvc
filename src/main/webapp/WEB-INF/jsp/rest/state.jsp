@@ -4,10 +4,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>状态显示</title>
 </head>
 <body>
-	<h1>
-		<% request.getParameter("state"); %>
-	</h1>
+	<h1>${id}</h1>
 </html>

@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -17,16 +18,12 @@ import springmvc.bean.User;
 @Controller
 @RequestMapping("rest")
 public class RestStyleController  {
-
-	
 	@Autowired
 	protected HttpServletRequest request;
 
 	@Autowired
 	protected HttpServletResponse response;
 
-
-	
 	@RequestMapping(value="/object", method=RequestMethod.GET)
 	public String user() {
 		return "rest/ObjectTest";
@@ -55,4 +52,10 @@ public class RestStyleController  {
 		request.setAttribute("user", u);
 		return "rest/userList";
 	}
+	
+	/*@RequestMapping(value="/{id}/get")
+	public String search(@PathVariable String id, Model model) {
+		model.addAttribute("id", "hello," + id);
+		return "rest/state";
+	}*/
 }

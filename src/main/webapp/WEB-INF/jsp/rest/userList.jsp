@@ -15,5 +15,7 @@
 		<h1>
 			年龄：${user.age}
 		</h1>
+		
+		<a href="/rest/${user.name}/get">点击查询用户详情</a>
 </body>
 </html>
