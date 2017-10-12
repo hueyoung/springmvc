@@ -11,7 +11,7 @@
 	<h1>REST风格！</h1>
 	<sf:form method="post" modelAttribute="user">
 		<sf:input type="text" value="请输入姓名" path="name"/> <sf:errors path="name"></sf:errors>
-		<sf:input type="text" value="请输入年龄" path="age"/>  <sf:errors path="age"></sf:errors>
+		<sf:input type="text" value="请输入年龄" path="age"/> <sf:errors path="age"></sf:errors>
 		<input type="submit" value="提交"/>
 	</sf:form>
 </body>

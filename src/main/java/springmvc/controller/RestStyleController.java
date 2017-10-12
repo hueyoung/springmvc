@@ -8,7 +8,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -41,6 +40,9 @@ public class RestStyleController  {
 			return "rest/restStyleController";
 		}
 		model.addAttribute("user", user);
+		/*// 模拟异常
+		int a = 0; int b = 1;int c;
+		c = b/a;*/
 		return "rest/userList";
 	}
 	
@@ -53,9 +55,9 @@ public class RestStyleController  {
 		return "rest/userList";
 	}
 	
-	/*@RequestMapping(value="/{id}/get")
-	public String search(@PathVariable String id, Model model) {
-		model.addAttribute("id", "hello," + id);
-		return "rest/state";
+	/*@ExceptionHandler(value={Exception.class})
+	public String handlerError(Exception ex, HttpServletRequest req) {
+		req.setAttribute("exception", ex);
+		return "error/error";
 	}*/
 }
