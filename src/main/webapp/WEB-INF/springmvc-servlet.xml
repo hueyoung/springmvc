@@ -19,12 +19,11 @@
 	
 	<!-- 使用annotation @Repository,@Service自动注册bean, 并保证@Required、@Autowired的属性被注入的包范围 -->
     <context:component-scan base-package="springmvc"/>
-    
     <mvc:annotation-driven />
     
-    <bean name="/hello.html" class="springmvc.controller.MyAbstractController">
+    <mvc:resources location="/style/" mapping="/style/**"></mvc:resources>
     
-    </bean>
+    <bean name="/hello.html" class="springmvc.controller.MyAbstractController"/>
     
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
     	<property name="prefix" value="/WEB-INF/jsp/"/>

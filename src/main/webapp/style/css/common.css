@@ -1,0 +1,6 @@
+@CHARSET "UTF-8";
+.common {
+	color: red;
+	text-shadow: yellow;
+	font-size: 20px;
+}
