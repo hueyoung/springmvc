@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 /**
  * @author 000001523
  * 动态访问路径演示
- *
  */
 @Controller
 @RequestMapping("rest")
