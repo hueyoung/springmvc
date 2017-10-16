@@ -15,7 +15,7 @@ import springmvc.bean.User;
 
 
 @Controller
-@RequestMapping("rest")
+@RequestMapping("api")
 public class RestStyleController  {
 	@Autowired
 	protected HttpServletRequest request;
@@ -44,6 +44,18 @@ public class RestStyleController  {
 		int a = 0; int b = 1;int c;
 		c = b/a;*/
 		return "rest/userList";
+	}
+	
+	@RequestMapping(value="/form", method=RequestMethod.GET)
+	public String form() {
+		//model.addAttribute(new User());
+		return "rest/formTest";
+	}
+	
+	@RequestMapping(value="/form", method=RequestMethod.POST)
+	public String form(User user, Model model) {
+		model.addAttribute("id", user.getName());
+		return "rest/state";
 	}
 	
 	@RequestMapping(value="/userList")

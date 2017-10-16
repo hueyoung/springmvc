@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>error</title>
+<title>Insert title here</title>
 </head>
 <body>
-	<h1>404 L ${ex.message}</h1>
+	<h1>安全页面</h1>
 </body>
 </html>
