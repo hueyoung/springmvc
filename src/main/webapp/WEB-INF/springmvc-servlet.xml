@@ -16,7 +16,9 @@
     http://www.springframework.org/schema/mvc/spring-mvc.xsd
     http://www.springframework.org/schema/aop
     http://www.springframework.org/schema/aop/spring-aop-2.0.xsd">
-	
+    
+    <!-- 引入属性文件 -->
+	<context:property-placeholder location="classpath:config.properties,classpath:log4j.properties" />
 	<!-- 使用annotation @Repository,@Service自动注册bean, 并保证@Required、@Autowired的属性被注入的包范围 -->
     <context:component-scan base-package="springmvc"/>
     <mvc:annotation-driven />
