@@ -22,7 +22,7 @@ public class MyBatisController {
 		List<User> user = null;
 		try {
 			session = MySqlSessionFactory.getInstance().openSession();
-			user = session.selectList("test.findUserByName", "毛");
+			user = session.selectList("test.findUserByName", "小");
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {

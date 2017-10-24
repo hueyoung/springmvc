@@ -18,6 +18,6 @@
 	    </environment>
 	  </environments>
 	  <mappers>
-	    <mapper resource="mapping/userMapping.xml"/>
+	    <mapper resource="mapper/userMapper.xml"/>
 	  </mappers>
 </configuration>
