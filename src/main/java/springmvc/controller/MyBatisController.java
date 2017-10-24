@@ -17,7 +17,7 @@ public class MyBatisController {
 	
 	@ResponseBody
 	@RequestMapping(value="user", method=RequestMethod.GET, params="json")
-	public List<User> infor() {
+	public List<User> select() {
 		SqlSession session = null;
 		List<User> user = null;
 		try {
@@ -29,5 +29,23 @@ public class MyBatisController {
 			session.close();
 		}
 		return user;
+	}
+	
+	@RequestMapping(value="update", method=RequestMethod.GET, params="json")
+	public void update() {
+		SqlSession session = null;
+		try {
+			session = MySqlSessionFactory.getInstance().openSession();
+			User user = new User();
+			user.setName("小下");
+			user.setSex("男");
+			user.setAge(787);
+			session.update("test.updateByName", user);
+			session.commit();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			session.close();
+		}
 	}
 }

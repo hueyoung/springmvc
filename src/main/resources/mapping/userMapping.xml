@@ -5,4 +5,8 @@
   <select id="findUserByName" parameterType="String" resultType="springmvc.po.User">
   	SELECT * FROM person_infor WHERE NAME LIKE '%${value}%'
   </select>
+  
+  <update id="updateByName" parameterType="springmvc.po.User">
+  		UPDATE person_infor SET sex=#{sex},age=#{age} WHERE NAME LIKE '%${name}%'
+  </update>
 </mapper>
