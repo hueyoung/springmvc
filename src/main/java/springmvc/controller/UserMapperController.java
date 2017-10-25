@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import springmvc.common.MySqlSessionFactory;
-import springmvc.mapper.UserMapper;
+import springmvc.mapper.UserMapper2;
 import springmvc.po.User;
 
 @Controller
@@ -19,7 +19,7 @@ public class UserMapperController {
 	@RequestMapping(value = "list", params = "json")
 	public List<User> list() {
 		SqlSession session = MySqlSessionFactory.getInstance().openSession();
-		UserMapper userMapper = session.getMapper(UserMapper.class);
+		UserMapper2 userMapper = session.getMapper(UserMapper2.class);
 		List<User> list = userMapper.findByUserId();
 		session.close();
 		return list;

@@ -10,7 +10,7 @@ import springmvc.po.User;
  * myBatis mapper代理
  *
  */
-public interface UserMapper {
+public interface UserMapper2 {
 
 	public List<User> findByUserId();
 	
