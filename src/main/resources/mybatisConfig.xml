@@ -6,6 +6,12 @@
 <configuration>
 	<!--引入外部properties文件  -->
  	<properties resource="config.properties"></properties><!-- 加载配置文件 --> 
+ 	
+ 	<!-- 扫描po类 设置别别方便mapper引用-->
+ 	<typeAliases>
+ 		<package name="springmvc.po"/>
+ 	</typeAliases>
+ 	
 	  <environments default="development">
 	    <environment id="development">
 	      <transactionManager type="JDBC"/>
@@ -17,6 +23,7 @@
 	      </dataSource>
 	    </environment>
 	  </environments>
+	  
 	  <mappers>
 	    <mapper resource="mapper/userMapper.xml"/>
 	     <mapper resource="mapper/userMapper2.xml"/>

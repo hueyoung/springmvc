@@ -6,7 +6,7 @@
   	SELECT * FROM person_infor WHERE NAME LIKE '%${value}%'
   </select>
   
-  <update id="updateByName" parameterType="springmvc.po.User">
+  <update id="updateByName" parameterType="User">
   		UPDATE person_infor SET sex=#{sex},age=#{age} WHERE NAME LIKE '%${name}%'
   </update>
 </mapper>

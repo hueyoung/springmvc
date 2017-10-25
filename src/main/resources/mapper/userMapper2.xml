@@ -2,11 +2,11 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="springmvc.mapper.UserMapper" >
 
-  <select id="findByUserId" parameterType="String" resultType="springmvc.po.User">
+  <select id="findByUserId" parameterType="String" resultType="User">
   	SELECT * FROM person_infor WHERE NAME LIKE '%${value}%'
   </select>
   
-  <update id="updateUser" parameterType="springmvc.po.User">
+  <update id="updateUser" parameterType="User">
   		UPDATE person_infor SET sex=#{sex},age=#{age} WHERE NAME LIKE '%${name}%'
   </update>
 </mapper>
