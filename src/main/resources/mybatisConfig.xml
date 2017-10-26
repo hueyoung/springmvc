@@ -25,10 +25,11 @@
 	  </environments>
 	  
 	  <mappers>
+	  
+	  	 	 <mapper resource="mapper/userMapper.xml"/>
 	   <!--  
 	   		这里可以用扫描包的方式实现加载mapper配置文件
 	   		满足条件：1.必须是使用mapper代理  2.mapper接口和mapper配置文件同名，同目录
-		  	 <mapper resource="mapper/userMapper.xml"/>
 		     <mapper resource="mapper/userMapper2.xml"/>
 	    -->
 	   <package name="springmvc.mapper"/>

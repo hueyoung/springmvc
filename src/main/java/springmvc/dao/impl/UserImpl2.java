@@ -37,8 +37,8 @@ public class UserImpl2 implements UserDao<User>{
 			session = MySqlSessionFactory.getInstance().openSession();
 			User user = new User();
 			user.setName("小下");
-			user.setSex("男");
-			user.setAge(787);
+			user.setSex("女");
+			user.setAge(101);
 			session.update("test.updateByName", user);
 			session.commit();
 		} catch (Exception e) {

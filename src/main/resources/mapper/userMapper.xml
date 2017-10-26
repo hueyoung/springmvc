@@ -7,6 +7,19 @@
   </select>
   
   <update id="updateByName" parameterType="User">
-  		UPDATE person_infor SET sex=#{sex},age=#{age} WHERE NAME LIKE '%${name}%'
+  		UPDATE person_infor SET sex=#{sex},age=#{age}
+  		
+  		<where>
+  			<include refid="sql_find_by_name"></include>
+  		</where>
   </update>
+  
+  <sql id="sql_find_by_name">
+  	<if test="name != null">
+  		NAME LIKE '%${name}%'
+  	</if>
+  	<!-- <if test="name == null">
+  		NAME LIKE '%${name}%'
+  	</if> -->
+  </sql>
 </mapper>
